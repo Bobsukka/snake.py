@@ -66,7 +66,7 @@ def next_turn(snake, food):
 
         score += 1
 
-        label.config(text="Pisteet: {}".format(score))
+        label.config(text="Points: {}".format(score))
 
         canvas.delete("food")
 
@@ -123,7 +123,7 @@ def check_collisions(snake):
 def game_over():
     canvas.delete(ALL)
     canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2,
-                       font=('consolas', 70), text='HÄVISIT PELIN', fill='red', tag='gameover')
+                       font=('consolas', 70), text='GAME OVER', fill='red', tag='gameover')
 
 
 window = Tk()
@@ -133,7 +133,7 @@ window.resizable(False, False)
 score = 0
 direction = 'down'
 
-label = Label(window, text='Pisteet:{}'.format(score), font=('consolas', 40))
+label = Label(window, text='Points:{}'.format(score), font=('consolas', 40))
 label.pack()
 
 canvas = Canvas(window, bg=BACKGROUND_COLOR,
